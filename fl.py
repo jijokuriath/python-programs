@@ -1,0 +1,26 @@
+def create(name):
+	fout=open(name,"w")
+	line1=raw_input("Name:")
+	fout.write(line1)
+	line2=raw_input("Addr:")
+	fout.write(line2)
+	line3=raw_input("Age:")
+	fout.write(str(line3))
+	fout.close()
+
+def show(name):
+	fin=open(name,"r")
+	line=fin.read()
+	print line
+
+import os
+print ".....................showing the file operations...................."
+name=raw_input("Enter the file name:")
+if os.path.isfile(name):
+	show(name)
+else:
+	create(name)
+	show(name)
+
+
+	
